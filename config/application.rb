@@ -23,5 +23,11 @@ module FirstApp
     #
     # config.time_zone = "Central Time (US & Canada)"
     # config.eager_load_paths << Rails.root.join("extras")
+    
+    # Avaliable languages
+    config.i18n.available_locales = [:en, :es]
+
+    #lenguage by default
+    config.i18n.default_locale = :es
   end
 end
