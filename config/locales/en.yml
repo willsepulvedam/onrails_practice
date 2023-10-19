@@ -13,11 +13,11 @@ en:
         product:
         attributes:
           title:
-            blank: 'can't be blank'
+            blank: 'cant be blank'
           description:
-            blank: 'can't be blank'
+            blank: 'cant be blank'
           price:
-            blank: 'can't be blank'          
+            blank: 'cant be blank'          
   common:
     confirm: 'Are you sure?'
     back: 'Go back'
