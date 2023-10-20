@@ -157,6 +157,9 @@ GEM
       racc
     pg (1.5.4)
     pg (1.5.4-x64-mingw-ucrt)
+    pg_search (2.3.6)
+      activerecord (>= 5.2)
+      activesupport (>= 5.2)
     pry (0.14.2)
       coderay (~> 1.1)
       method_source (~> 1.0)
@@ -296,6 +299,7 @@ DEPENDENCIES
   importmap-rails
   jbuilder
   pg (~> 1.1)
+  pg_search (~> 2.3)
   pry (~> 0.14.2)
   puma (>= 5.0)
   rails (~> 7.1.0)
