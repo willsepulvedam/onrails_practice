@@ -28,6 +28,7 @@ es:
       title: 'Añadir Producto'
     index:
       title: 'Productos'
+      all: 'Todos'
     create:
       created: 'Tu producto se ha creado correctamente'
     update:
@@ -41,6 +42,8 @@ es:
     index:
       title: 'Categorías'
       new: 'Añadir categoría'
+      min_price: 'Precio minimo'
+      max_price: 'Precio maximo'
     edit:
       title: 'Editar categoría'
     create:
