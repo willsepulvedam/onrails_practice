@@ -44,6 +44,10 @@ es:
       new: 'Añadir categoría'
       min_price: 'Precio minimo'
       max_price: 'Precio maximo'
+      query_text: 'Que quieres buscar?' 
+      expensive: 'Mas caros'
+      cheapest: 'Mas baratos'
+      newest: 'Añadidos recientemente'
     edit:
       title: 'Editar categoría'
     create:

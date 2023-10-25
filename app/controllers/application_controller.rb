@@ -1,4 +1,6 @@
 class ApplicationController < ActionController::Base
+  include Pagy::Backend
+
   around_action :switch_local
 
   def switch_local(&action)
