@@ -1,7 +1,17 @@
 # frozen_string_literal: true
 
 class Product < ApplicationRecord
-  include pg_search: :Model
+  include PgSearch::Model
+  pg_search_scope :search_full_text, against: {
+    title: 'A',
+    description: 'B'
+  }
+
+  ORDER_BY = {
+    newest: "created_at DESC",
+    expensive: "price DESC",
+    cheapest: "price DESC"
+  }
 
   has_one_attached :photo
 
