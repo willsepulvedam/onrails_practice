@@ -25,10 +25,11 @@ class ProductsController < ApplicationController
   end
 
   def edit
-    product
+    authorize! product
   end
 
   def update
+    authorize! product
     if product.update(product_params)
       redirect_to product_path, notice: t('.updated')
     else
@@ -37,6 +38,7 @@ class ProductsController < ApplicationController
   end
 
   def destroy
+    authorize! product
     product.destroy
 
     redirect_to products_path, notice: t('.destroyed'), status: :see_other
@@ -50,7 +52,7 @@ class ProductsController < ApplicationController
   end
 
   def product_params_index
-    params.permit(:category_id, :min_price, :max_price, :query_text, :order_by)
+    params.permit(:category_id, :min_price, :max_price, :query_text, :order_by, :page)
   end
 
   def product

@@ -4,29 +4,32 @@ es:
   activerecord:
     models:
       product: Producto
+      user: Usuario
+      category: Categoría
     attributes:
       product:
         title: 'Titulo'
         description: 'Descripcion'
         price: 'Precio'
         photo: 'Foto'
-    errors:
-      models:
-        product:
-        attributes:
-          title:
-            blank: 'no puede estar vacio'
-          description:
-            blank: 'no puede estar vacia'
-          price:
-            blank: 'no puede estar vacio'          
+      user:
+        email: 'Correo electrónico'
+        username: 'Usuario'
+        password: 'Contraseña'
+      category:
+        name: 'Nombre'          
   common:
     confirm: 'Estas seguro?'
     back: 'Volver'
     not_logged_in: 'Tienes que iniciar seccion o crear una cuenta'
+    not_authorized: 'No tienes permisos para esta accion'
+    not_found: 'No se ha encontrado'
   shared:
     header:
       add: 'Anadir producto'
+      login: 'Inicio de seccion'
+      register: 'Registro'
+      logout: 'Salir'
   authentication:
     users:
       create:
@@ -35,6 +38,8 @@ es:
       create:
         created: 'Bienvenido!'
         failed: 'Login invalido'
+      destroy:
+        destroyed: 'Tu sesión ha terminado! Hasta la próxima'
   products:
     edit:
       title: 'Editar Producto'
@@ -49,6 +54,10 @@ es:
       expensive: 'Mas caros'
       cheapest: 'Mas baratos'
       newest: 'Añadidos recientemente'
+    show:
+      edit: 'Editar producto'
+      delete: 'Borrar producto'
+      view_more_profile: 'Ver mas productos de %{username}'
     create:
       created: 'Tu producto se ha creado correctamente'
     update:
@@ -72,3 +81,4 @@ es:
       destroyed: 'Tu categoría se ha eliminado correctamente'
     new:
       title: 'Añadir categoría'
+      
