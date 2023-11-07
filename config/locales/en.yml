@@ -1,29 +1,46 @@
 en:  
+  app_name: 'SellIT'
+  meta_title: 'Buy and sell second hand products!'
   activerecord:
     models:
       product: Product
+      user: User
+      category: Category
     attributes:
       product:
         title: 'Title'
         description: 'Description'
         price: 'Price'
         photo: 'Photo'
-    errors:
-      models:
-        product:
-        attributes:
-          title:
-            blank: 'cant be blank'
-          description:
-            blank: 'cant be blank'
-          price:
-            blank: 'cant be blank'          
+      user:
+        email: 'Email'
+        username: 'Username'
+        password: 'Password'
+      category:
+        name: 'Name'          
   common:
     confirm: 'Are you sure?'
     back: 'Go back'
+    not_logged_in: 'You have to login or create an account'
+    not_authorized: 'You dont have permissions for this action'
+    not_found: 'Not found'
   shared:
     header:
       add: 'Add products'
+      login: 'Login'
+      register: 'Register'
+      logout: 'Logout'
+      favorites: 'My favorites'
+  authentication:
+    users:
+      create:
+        created: 'Your account has been create!'
+    sessions:
+      create:
+        created: 'Welcome!'
+        failed: 'Invalid login!'
+      destroy:
+        destroyed: 'Session ended. Bye!'
   products:
     edit:
       title: 'Edit product'
@@ -34,9 +51,14 @@ en:
       all: 'All'
       min_price: 'Min price'
       max_price: 'Max price'
+      query_text: 'What do you want to search?'
+      expensive: 'Expensive first'
+      cheapest: 'Cheapest first'
+      newest: 'Recently added'
     show:
       edit: 'Edit product'
       delete: 'Delete product'
+      view_more_profile: 'View more products by %{username}'
     create:
       created: 'Your product has been successfully created'
     update:
@@ -60,3 +82,6 @@ en:
       destroyed: 'Your category has been sucessfully destroyed'
     new: 
       title: 'New Category'
+  favorites:
+    index: 
+      title: 'My Favorites'
