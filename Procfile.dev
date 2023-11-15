@@ -1,0 +1,2 @@
+web: env RUBY_DEBUG_OPEN=true bundle exec rails s -p 3000
+css: bundle exec rails tailwindcss:watch

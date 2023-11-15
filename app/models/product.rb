@@ -1,7 +1,18 @@
 # frozen_string_literal: true
 
 class Product < ApplicationRecord
-  include pg_search: :Model
+  include PgSearch::Model
+  include Favoritable
+  pg_search_scope :search_full_text, against: {
+    title: 'A',
+    description: 'B'
+  }
+
+  ORDER_BY = {
+    newest: "created_at DESC",
+    expensive: "price DESC",
+    cheapest: "price DESC"
+  }
 
   has_one_attached :photo
 
@@ -10,4 +21,9 @@ class Product < ApplicationRecord
   validates :price, presence: true
 
   belongs_to :category
+  belongs_to :user, default: -> { Current.user }
+
+  def owner?
+    user_id ==  Current.user&.id
+  end
 end
